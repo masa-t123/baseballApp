@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\DB;
 
 class Database
 {
+    /**
+     * 最新の更新IDを取得する
+     * @return mixed
+     */
     public function getUpdatedId()
     {
         $updatedId = DB::table('rank')->max('updated_id');
@@ -12,6 +16,11 @@ class Database
         return $updatedId;
     }
 
+    /**
+     * 順位データを挿入する
+     * @param $updatedId
+     * @param $rankData
+     */
     public function insertRankData($updatedId, $rankData)
     {
         DB::transaction(function () use ($updatedId, $rankData) {

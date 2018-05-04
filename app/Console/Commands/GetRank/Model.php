@@ -38,6 +38,9 @@ class Model
 
     }
 
+    /**
+     * メイン実行
+     */
     public function exec()
     {
         $db = new Database();
@@ -63,6 +66,11 @@ class Model
 
     }
 
+    /**
+     * 指定されたURLからデータを抽出する
+     * @param $url
+     * @return array
+     */
     private function getRankDetail($url)
     {
         $dom = new \DOMDocument;
@@ -83,6 +91,11 @@ class Model
         return $rankList;
     }
 
+    /**
+     * 項目を英名にする
+     * @param $itemValList
+     * @return array
+     */
     private function addItemKey($itemValList)
     {
         $addKeyItem = [];
