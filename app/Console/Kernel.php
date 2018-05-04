@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('GetRank')->cron('00 0-23/3 * * *');
+        $schedule->command('GetRank')->cron('0 0-23/3 * * *');
     }
 
     /**
