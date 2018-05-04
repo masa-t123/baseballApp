@@ -8,7 +8,7 @@ use App\Common\Base\Controller\BaseBatchController;
 
 class Controller extends BaseBatchController
 {
-    const IDENTIFIER = 'get_bank';
+    const IDENTIFIER = 'get_rank';
 
     /**
      * The name and signature of the console command.
