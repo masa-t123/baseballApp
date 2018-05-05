@@ -2,8 +2,6 @@
 
 namespace App\Console\Commands\GetRank;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Log;
 use App\Common\Base\Controller\BaseBatchController;
 
 class Controller extends BaseBatchController
@@ -31,7 +29,7 @@ class Controller extends BaseBatchController
      */
     public function __construct()
     {
-        parent::__construct($this->signature);
+        parent::__construct();
     }
 
     /**

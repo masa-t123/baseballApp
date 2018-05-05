@@ -16,28 +16,28 @@ class BaseBatchController extends Command
 
     public function setIdentifier($identifier)
     {
-        static::$identifier = $identifier;
+        self::$identifier = $identifier;
     }
 
     public function batchStart()
     {
-        static::outputLog4Batch('info', 'start');
+        self::outputLog4Batch('info', 'start');
     }
 
     public function batchSuccess()
     {
-        static::outputLog4Batch('info', 'end');
+        self::outputLog4Batch('info', 'end');
     }
 
     public function batchFailed()
     {
-        static::outputLog4Batch('error', 'end(Failed)');
+        self::outputLog4Batch('error', 'end(Failed)');
         exit;
     }
 
     public static function outputLog4Batch($level, $message)
     {
-        Log::channel('batch')->$level(static::$identifier. " {$message}");
+        Log::channel('batch')->$level(self::$identifier. " {$message}");
     }
 
 
