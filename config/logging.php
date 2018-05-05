@@ -72,6 +72,12 @@ return [
             'level' => 'debug',
             'days' => 7,
         ],
+        'api' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/api.log'),
+            'level' => 'debug',
+            'days' => 7,
+        ],
     ],
 
 ];
