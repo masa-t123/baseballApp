@@ -22,15 +22,15 @@ class RankController extends BaseApiController
      */
     public function index(Request $request)
     {
+        // 識別子セット
+        $this->setIdentifier(self::IDENTIFIER_GET);
+        $this->apiStart();
+
         // jsonヘッダが付いていなければ400で返す
         if (!$request->isJson()) {
             return $this->apiFailed('not exist content-type:json', 400);
         }
 
-        // 識別子セット
-        $this->setIdentifier(self::IDENTIFIER_GET);
-
-        $this->apiStart();
         try {
             $model = new Model();
             $data = $model->getRankData();
