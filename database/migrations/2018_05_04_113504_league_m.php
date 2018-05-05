@@ -17,6 +17,7 @@ class LeagueM extends Migration
             $table->timestamps();
             $table->integer('league_cd')->primary();
             $table->string('league_nm',100);
+            $table->string('league_nm_en',100);
         });
     }
 

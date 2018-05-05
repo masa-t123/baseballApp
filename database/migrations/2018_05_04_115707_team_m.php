@@ -18,6 +18,7 @@ class TeamM extends Migration
             $table->integer('league_cd');
             $table->integer('team_cd')->primary();
             $table->string('team_nm',100);
+            $table->string('team_nm_en',100);
         });
     }
 
