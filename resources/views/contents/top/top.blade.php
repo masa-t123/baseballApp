@@ -1,5 +1,13 @@
 @extends('layouts.base')
 
+@section('css')
+    <link href="{{ asset('css/contents/top/top.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
+@endsection
+
+@section('js')
+    <script src="{{ asset('js/contents/top/top.js') }}?date={{ date('YmdHis') }}" type="text/javascript"></script>
+@endsection
+
 @section('header')
     <header class="masthead" style="background-image: url({{ asset('image/common/home-bg.jpg') }})">
         <div class="overlay"></div>

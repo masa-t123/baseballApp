@@ -1,4 +1,3 @@
-<?php $date = date('YmdHis'); ?>
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -12,11 +11,12 @@
         <meta name="description" content="yodaemonのページ" >
 
         <!-- Styles -->
-        <link href="{{ asset('css/common/bootstrap/bootstrap.min.css') }}?date={{ $date }}" rel="stylesheet">
-        <link href="{{ asset('css/common/font-awesome/css/font-awesome.css') }}?date={{ $date }}" rel="stylesheet">
-        <link href="{{ asset('css/common/yodaemon.css') }}?date={{ $date }}" rel="stylesheet">
+        <link href="{{ asset('css/common/bootstrap/bootstrap.min.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
+        <link href="{{ asset('css/common/font-awesome/css/font-awesome.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
+        <link href="{{ asset('css/common/yodaemon.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        @yield('css')
     </head>
 
     <body>
@@ -72,9 +72,10 @@
     </footer>
 
     <!-- Javascript -->
-    <script src="{{ asset('js/common/jquery/jquery.slim.js') }}?date={{ $date }}" type="text/javascript"></script>
-    <script src="{{ asset('js/common/bootstrap/bootstrap.bundle.min.js') }}?date={{ $date }}" type="text/javascript"></script>
-    <script src="{{ asset('js/common/yodaemon.js') }}?date={{ $date }}" type="text/javascript"></script>
+    <script src="{{ asset('js/common/jquery/jquery.slim.js') }}?date={{ date('YmdHis') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/common/bootstrap/bootstrap.bundle.min.js') }}?date={{ date('YmdHis') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/common/yodaemon.js') }}?date={{ date('YmdHis') }}" type="text/javascript"></script>
+    @yield('js')
     </body>
 
 </html>
