@@ -16,23 +16,26 @@
             <div class="col-lg-5 col-md-5 mx-auto">
                 <p>Blog</p>
                 <hr>
-                <div class="post-preview">
-                    <a href="/blog">
-                        <h2 class="post-title">
-                            タイトル
-                        </h2>
-                        <h3 class="post-subtitle">
-                            中身
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by
-                        <a href="/blog" target="_blank">yodaemon-blog</a>
-                        on September 24, 2018</p>
-                </div>
-                <hr>
+                @foreach ($rssList as $rss)
+                    <div class="post-preview">
+                        <a href="{{ $rss['link'] }}" target="_blank">
+                            <h2 class="post-title">
+                                {{ $rss['title'] }}
+                            </h2>
+                            <h3 class="post-subtitle">
+                                {{ $rss['description'] }}
+                            </h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <a href="/blog" target="_blank">yodaemon-blog</a>
+                            {{ $rss['date'] }}
+                        </p>
+                    </div>
+                    <hr>
+                @endforeach
                 <!-- Pager -->
                 <div class="clearfix">
-                    <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                    <a class="btn btn-primary float-right" href="/blog" target="_blank">more &rarr;</a>
                 </div>
             </div>
 
