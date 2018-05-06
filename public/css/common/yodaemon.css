@@ -284,12 +284,13 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > a > .post-title {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
 .post-preview > a > .post-subtitle {
+  font-size: 25px;
   font-weight: 300;
   margin: 0 0 10px;
 }
@@ -313,7 +314,7 @@ header.masthead .post-heading .meta a {
 
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 

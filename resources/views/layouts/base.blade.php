@@ -1,3 +1,4 @@
+<?php $date = date('YmdHis'); ?>
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -11,9 +12,9 @@
         <meta name="description" content="yodaemonのページ" >
 
         <!-- Styles -->
-        <link href="{{ asset('css/common/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/common/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/common/yodaemon.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/common/bootstrap/bootstrap.min.css') }}?date={{ $date }}" rel="stylesheet">
+        <link href="{{ asset('css/common/font-awesome/css/font-awesome.css') }}?date={{ $date }}" rel="stylesheet">
+        <link href="{{ asset('css/common/yodaemon.css') }}?date={{ $date }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     </head>
@@ -31,13 +32,13 @@
                 <ul class="navbar-nav ml-auto">
                     <!--
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile(未作成)</a>
+                        <a class="nav-link" href="#">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Product(未作成)</a>
+                        <a class="nav-link" href="#">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Document(未作成)</a>
+                        <a class="nav-link" href="#">Document</a>
                     </li>
                     -->
                     <li class="nav-item">
@@ -45,7 +46,7 @@
                     </li>
                     <!--
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact(未作成)</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                     -->
                 </ul>
@@ -54,20 +55,9 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url({{ asset('image/common/home-bg.jpg') }})">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>yodaemon.com</h1>
-                        <span class="subheading">何かの勢いで作った</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    @yield('header')
 
+    <!-- メインコンテンツ -->
     @yield('content')
 
     <!-- Footer -->
@@ -82,9 +72,9 @@
     </footer>
 
     <!-- Javascript -->
-    <script src="{{ asset('js/common/jquery/jquery.slim.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/common/bootstrap/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/common/yodaemon.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/common/jquery/jquery.slim.js') }}?date={{ $date }}" type="text/javascript"></script>
+    <script src="{{ asset('js/common/bootstrap/bootstrap.bundle.min.js') }}?date={{ $date }}" type="text/javascript"></script>
+    <script src="{{ asset('js/common/yodaemon.js') }}?date={{ $date }}" type="text/javascript"></script>
     </body>
 
 </html>
