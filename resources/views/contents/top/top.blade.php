@@ -47,7 +47,7 @@
                 <hr>
                 <!-- InstaWidget -->
                 <a href="https://instawidget.net/v/user/yodaemon" id="link-accf3aefa47d2bd033a77dd2bd4ec9e5cc111796173531cfc212a379eee4cb54">@yodaemon</a>
-                <script src="https://instawidget.net/js/instawidget.js?u=accf3aefa47d2bd033a77dd2bd4ec9e5cc111796173531cfc212a379eee4cb54&width=444px"></script>
+                <script src="https://instawidget.net/js/instawidget.js?u=accf3aefa47d2bd033a77dd2bd4ec9e5cc111796173531cfc212a379eee4cb54&width=310px"></script>
                 <hr>
             </div>
         </div>
