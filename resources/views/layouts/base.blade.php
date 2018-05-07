@@ -76,6 +76,17 @@
     <script src="{{ asset('js/common/bootstrap/bootstrap.bundle.min.js') }}?date={{ date('YmdHis') }}" type="text/javascript"></script>
     <script src="{{ asset('js/common/yodaemon.js') }}?date={{ date('YmdHis') }}" type="text/javascript"></script>
     @yield('js')
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118824478-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118824478-1');
+    </script>
+
     </body>
 
 </html>
