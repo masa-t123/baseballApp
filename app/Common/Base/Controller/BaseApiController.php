@@ -51,7 +51,7 @@ class BaseApiController extends Controller
      */
     public function apiFailed($message='', $status=500)
     {
-        self::outputLog4Api('alert', 'end(Failed)');
+        self::outputLog4Api('error', "end(Failed) status:{$status}");
 
         $responseData = [
             'error' => [
