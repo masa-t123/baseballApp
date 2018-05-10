@@ -64,6 +64,9 @@ class Model
         }
         Controller::outputLog4Batch('info', 'パシフィックリーグのデータ挿入完了');
 
+        // 実行日の古いデータを削除する
+        $db->deleteOldData($updatedId);
+
     }
 
     /**

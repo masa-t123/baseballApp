@@ -175,4 +175,26 @@ class Database
         });
     }
 
+    public function deleteOldData($updatedId4Pitcher, $updatedId4Batter)
+    {
+        DB::transaction(function () use ($updatedId4Pitcher, $updatedId4Batter) {
+            $today    = date('Y-m-d');
+            $tomorrow = date('Y-m-d', strtotime('1 day', strtotime($today)));
+            // 投手
+            DB::table('record_pitcher')
+                ->where('updated_id', '<', $updatedId4Pitcher)
+                ->where('updated_at', '>=', $today)
+                ->where('updated_at', '<', $tomorrow)
+                ->delete();
+
+            // 野手
+            DB::table('record_batter')
+                ->where('updated_id', '<', $updatedId4Batter)
+                ->where('updated_at', '>=', $today)
+                ->where('updated_at', '<', $tomorrow)
+                ->delete();
+        });
+
+    }
+
 }

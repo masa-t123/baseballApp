@@ -73,6 +73,9 @@ class Model
             }
         }
 
+        // 実行日付けの古いデータを削除する
+        $this->db->deleteOldData($updatedId4Pitcher, $updatedId4Batter);
+
     }
 
     /**

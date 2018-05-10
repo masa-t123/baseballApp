@@ -48,4 +48,21 @@ class Database
         });
 
     }
+
+    /**
+     * 実行日付けの古いデータを削除する
+     * @param $updatedId
+     */
+    public function deleteOldData($updatedId)
+    {
+        DB::transaction(function () use ($updatedId) {
+            $today    = date('Y-m-d');
+            $tomorrow = date('Y-m-d', strtotime('1 day', strtotime($today)));
+            DB::table('rank')
+                ->where('updated_id', '<', $updatedId)
+                ->where('updated_at', '>=', $today)
+                ->where('updated_at', '<', $tomorrow)
+                ->delete();
+        });
+    }
 }
