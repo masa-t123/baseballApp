@@ -65,7 +65,7 @@
                 <p><i class="fab fa-twitter"></i>&nbsp;Twitter</p>
                 <hr>
                 <!-- TwitterWidget -->
-                <a class="twitter-timeline" href="https://twitter.com/yodaemon3?ref_src=twsrc%5Etfw">Tweets by yodaemon3</a>
+                <a class="twitter-timeline" href="https://twitter.com/yodaemon3?ref_src=twsrc%5Etfw" data-tweet-limit="5">Tweets by yodaemon3</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
