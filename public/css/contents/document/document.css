@@ -1,0 +1,26 @@
+.document-list {
+    font-size: 18px;
+}
+
+.last-updated {
+    font-size: 8px;
+    text-align: right;
+}
+
+.api-title {
+    text-align: center;
+    margin-bottom:25px;
+}
+
+.api-url {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom:25px;
+}
+
+.param-area {
+    font-size: 14px;
+    margin-bottom:25px;
+}

@@ -15,4 +15,10 @@
 //    return view('welcome');
 //});
 
+// TOP
 Route::get('/', 'Web\Top\TopController@index');
+
+// Document
+Route::get('/document', 'Web\Document\DocumentController@index');
+// API - 順位表取得
+Route::get('/document/manual/api/rank', 'Web\Document\DocumentController@manualApiRank');

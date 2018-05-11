@@ -12,7 +12,8 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/common/bootstrap/bootstrap.min.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
-        <link href="{{ asset('css/common/font-awesome/css/font-awesome.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
+        <!--<link href="{{ asset('css/common/font-awesome/css/font-awesome.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link href="{{ asset('css/common/yodaemon.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
@@ -37,12 +38,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Product</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Document</a>
-                    </li>
                     -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/blog" target="_blank">Blog</a>
+                        <a class="nav-link" href="/document">document</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog" target="_blank">blog</a>
                     </li>
                     <!--
                     <li class="nav-item">
