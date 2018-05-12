@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-10 mx-auto">
-                リクエストパラメータ(未実装)
+                リクエストパラメータ
                 <div class="param-area">
                     <table class="table table-bordered">
                         <thead>
@@ -80,11 +80,11 @@
                         </thead>
                         <tbody>
                         <tr>
+                            <td>date</td>
                             <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td>date</td>
+                            <td>指定した日付の最終更新日データを返します。<br/>※指定なしの場合は、現在日付で最新のデータを返します。</td>
+                            <td>データ蓄積開始した2018/05/10以前を指定すると400で返します。</td>
                         </tr>
                         </tbody>
                     </table>
