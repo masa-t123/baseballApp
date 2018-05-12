@@ -8,11 +8,13 @@ class Model
      * API返却用に順位データを取得する
      * @return array
      */
-    public function getRankData()
+    public function getRankData($requestList)
     {
+        $paramList = $this->makeParamList($requestList);
+
         // DBからデータを抽出
         $db = new Database();
-        $dataList = $db->getRank();
+        $dataList = $db->getRank($paramList);
 
         $resultArray = [];
         // データをjson返却用に加工
@@ -39,6 +41,31 @@ class Model
             $resultArray['result'][$data->league_nm_en][] = $teamData;
         }
         return $resultArray;
+    }
+
+    /**
+     * SQLに渡すパラメータを作成する
+     * @param $requestList
+     * @return array
+     */
+    private function makeParamList($requestList)
+    {
+        // -----
+        // 日付
+        // -----
+        $dateFrom = date('Y-m-d');
+        // 日付指定があれば書き換え
+        if (isset($requestList['date'])) {
+            $dateFrom = date('Y-m-d', strtotime($requestList['date']));
+        }
+        $dateTo = date('Y-m-d', strtotime("1 day", strtotime($dateFrom)));
+
+        $paramList = [
+            'dateFrom' => $dateFrom,
+            'dateTo'   => $dateTo,
+        ];
+
+        return $paramList;
     }
 
 }
