@@ -32,7 +32,7 @@
                 API一覧
                 <table class="table table-bordered">
                     <thead>
-                    <tr class="table-success text-center">
+                    <tr class="table-info text-center">
                         <th>API名</th>
                         <th>説明</th>
                         <th>document</th>
@@ -48,14 +48,15 @@
                             </a>
                         </td>
                     </tr>
-
-<!--
                     <tr>
-                        <td>プロ野球-選手成績取得API</td>
-                        <td>プロ野球の選手成績を取得するAPIです。</td>
-                        <td><a href="/document/manual/api/record"><button type="button" class="btn btn-info btn-xs">仕様書</button></a></td>
+                        <td>プロ野球-成績(野手)取得API</td>
+                        <td>プロ野球の各チームに所属する選手の成績を取得するAPIです。</td>
+                        <td class="text-center">
+                            <a href="/document/manual/api/record/batter"><button type="button" class="btn btn-info btn-xs">
+                                    <i class="fa fa-book-open"></i>&nbsp;仕様書</button>
+                            </a>
+                        </td>
                     </tr>
--->
                     </tbody>
                 </table>
             </div>

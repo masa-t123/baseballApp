@@ -22,3 +22,5 @@ Route::get('/', 'Web\Top\TopController@index');
 Route::get('/document', 'Web\Document\DocumentController@index');
 // API - 順位表取得
 Route::get('/document/manual/api/rank', 'Web\Document\DocumentController@manualApiRank');
+// API - 成績(野手)取得
+Route::get('/document/manual/api/record/batter', 'Web\Document\DocumentController@manualApiRecord4Batter');
