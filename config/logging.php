@@ -65,7 +65,7 @@ return [
             'driver' => 'errorlog',
             'level' => 'debug',
         ],
-
+        // ▼custom
         'batch' => [
             'driver' => 'daily',
             'path' => storage_path('logs/batch.log'),
@@ -75,6 +75,12 @@ return [
         'api' => [
             'driver' => 'daily',
             'path' => storage_path('logs/api.log'),
+            'level' => 'debug',
+            'days' => 7,
+        ],
+        'web' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/web.log'),
             'level' => 'debug',
             'days' => 7,
         ],
