@@ -9,7 +9,6 @@ use App\Common\Base\Controller\BaseApiController;
 
 class RankController extends BaseApiController
 {
-    const IDENTIFIER_GET = 'get_rank';
 
     public function __construct()
     {
@@ -23,10 +22,6 @@ class RankController extends BaseApiController
      */
     public function index(Request $request)
     {
-        // 識別子セット
-        $this->setIdentifier(self::IDENTIFIER_GET);
-        $this->apiStart();
-
         // jsonヘッダが付いていなければ400で返す
         if (!$request->isJson()) {
             return $this->apiFailed('not exist content-type:json', 400);
@@ -52,8 +47,7 @@ class RankController extends BaseApiController
             $data = $model->getRankData($requestList);
 
         } catch (Exception $ex) {
-            $message = "file:{$ex->getFile()} line:{$ex->getLine()} message:{$ex->getMessage()}";
-            static::outputLog4Api('alert', $message);
+            logger()->channel('api')->alert("file:{$ex->getFile()} line:{$ex->getLine()} message:{$ex->getMessage()}");
             return $this->apiFailed();
         }
 

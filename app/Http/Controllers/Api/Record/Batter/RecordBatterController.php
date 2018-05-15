@@ -8,7 +8,6 @@ use App\Common\Base\Controller\BaseApiController;
 
 class RecordBatterController extends BaseApiController
 {
-    const IDENTIFIER_GET = 'get_record_batter';
 
     public function __construct()
     {
@@ -22,9 +21,6 @@ class RecordBatterController extends BaseApiController
      */
     public function index(Request $request)
     {
-        // 識別子セット
-        $this->setIdentifier(self::IDENTIFIER_GET);
-        $this->apiStart();
 
         // jsonヘッダが付いていなければ400で返す
         if (!$request->isJson()) {
@@ -35,8 +31,7 @@ class RecordBatterController extends BaseApiController
             $model = new Model();
             $data = $model->getRecordData();
         } catch (Exception $ex) {
-            $message = "file:{$ex->getFile()} line:{$ex->getLine()} message:{$ex->getMessage()}";
-            static::outputLog4Api('alert', $message);
+            logger()->channel('api')->alert("file:{$ex->getFile()} line:{$ex->getLine()} message:{$ex->getMessage()}");
             return $this->apiFailed();
         }
 
