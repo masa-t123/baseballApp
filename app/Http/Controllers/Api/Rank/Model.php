@@ -50,15 +50,16 @@ class Model
      */
     private function makeParamList($requestList)
     {
+
         // -----
         // 日付
         // -----
-        $dateFrom = date('Y-m-d');
+        $dateFrom = date('Y-m-d', strtotime("-1 day", strtotime(date('Ymd'))));
         // 日付指定があれば書き換え
         if (isset($requestList['date'])) {
-            $dateFrom = date('Y-m-d', strtotime($requestList['date']));
+            $dateFrom = date('Y-m-d', strtotime("-1 day", strtotime($requestList['date'])));
         }
-        $dateTo = date('Y-m-d', strtotime("1 day", strtotime($dateFrom)));
+        $dateTo = date('Y-m-d', strtotime("2 day", strtotime($dateFrom)));
 
         $paramList = [
             'dateFrom' => $dateFrom,

@@ -23,8 +23,11 @@ inner join league_m
         on league_m.league_cd = rank.league_cd
 inner join team_m
         on team_m.team_cd = rank.team_cd
-where rank.updated_at >= '{$paramList['dateFrom']}'
-and rank.updated_at < '{$paramList['dateTo']}'
+where rank.updated_id = (select max(rank2.updated_id)
+                         from rank rank2
+                         where rank2.updated_at >= '{$paramList['dateFrom']}'
+                         and rank2.updated_at    < '{$paramList['dateTo']}'
+)        
 order by rank.league_cd,
          rank.rank
        ";
