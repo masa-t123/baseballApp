@@ -6,6 +6,10 @@ use Closure;
 
 class WebLogger
 {
+
+    const PROGRAM_STAGE_START = 'program start. ';
+    const PROGRAM_STAGE_END   = 'program end.   ';
+
     /**
      * Handle an incoming request.
      *
@@ -15,26 +19,31 @@ class WebLogger
      */
     public function handle($request, Closure $next)
     {
-        // 最初
-        logger()->channel('web')->debug("program start. ".implode("\t",
-            [
-                $request->ip(),
-                $request->path(),
-                $request->method(),
-                $request->server("HTTP_USER_AGENT"),
-            ]));
+
+        $this->outputLog($request, self::PROGRAM_STAGE_START);
 
         $exec = $next($request);
 
-        // 最後
-        logger()->channel('web')->debug("program end.   ".implode("\t",
+        $this->outputLog($request, self::PROGRAM_STAGE_END);
+
+        return $exec;
+    }
+
+    /**
+     * ログ出力
+     * @param $request
+     * @param $stage
+     */
+    private function outputLog($request, $stage)
+    {
+        // 最初
+        logger()->channel('web')->debug($stage.implode("\t",
                 [
                     $request->ip(),
                     $request->path(),
                     $request->method(),
                     $request->server("HTTP_USER_AGENT"),
                 ]));
-
-        return $exec;
     }
+
 }
