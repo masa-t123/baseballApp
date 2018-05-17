@@ -7,7 +7,9 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'yodaemon.com') }}</title>
+        <title>
+            @yield('title')
+        </title>
         <meta name="description" content="yodaemonのページ" >
 
         <!-- Styles -->

@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+    {{ config('app.name', 'yodaemon.com') }}&nbsp;-&nbsp;document
+@endsection
+
 @section('css')
     <link href="{{ asset('css/contents/document/document.css') }}?{{ date('YmdHis') }}" rel="stylesheet">
 @endsection

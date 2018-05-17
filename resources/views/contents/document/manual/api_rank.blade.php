@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+    {{ config('app.name', 'yodaemon.com') }}&nbsp;-&nbsp;順位取得API
+@endsection
+
 @section('css')
     <link href="{{ asset('css/contents/document/document.css') }}?date={{ date('YmdHis') }}" rel="stylesheet">
 @endsection
