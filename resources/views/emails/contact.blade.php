@@ -1,4 +1,4 @@
-差出人：{{ $requestName }}&nbsp;&lt;{{ $requestEmail }}&gt;
+差出人：{{ $requestName }} <{{ $requestEmail }}>
 件名：{{ $requestSubject }}
 
 本文：
