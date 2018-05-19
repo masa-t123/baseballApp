@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('title')
-    {{ config('app.name', 'yodaemon.com') }}&nbsp;-&nbsp;document
+    {{ config('app.name', 'yodaemon.com') }}&nbsp;-&nbsp;仕様書
 @endsection
 
 @section('css')
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <span class="subheading">yodaemon.com - document</span>
+                        <span class="subheading">制作物の仕様書とかを載せています</span>
                     </div>
                 </div>
             </div>

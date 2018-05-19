@@ -42,16 +42,14 @@
                     </li>
                     -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/document">document</a>
+                        <a class="nav-link" href="/document">仕様書</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/blog" target="_blank">blog</a>
+                        <a class="nav-link" href="/blog" target="_blank">ブログ</a>
                     </li>
-                    <!--
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="/contact">お問い合わせ</a>
                     </li>
-                    -->
                 </ul>
             </div>
         </div>

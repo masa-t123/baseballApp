@@ -20,7 +20,7 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
                         <h1>yodaemon.com</h1>
-                        <span class="subheading">何かの勢いで作った</span>
+                        <span class="subheading">プログラム～趣味まで何でも</span>
                     </div>
                 </div>
             </div>

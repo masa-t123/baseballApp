@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('title')
-    {{ config('app.name', 'yodaemon.com') }}&nbsp;-&nbsp;contact
+    {{ config('app.name', 'yodaemon.com') }}&nbsp;-&nbsp;お問い合わせ
 @endsection
 
 @section('css')
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <span class="subheading">yodaemon.com - contact</span>
+                        <span class="subheading">何かありましたらご連絡ください。</span>
                     </div>
                 </div>
             </div>
