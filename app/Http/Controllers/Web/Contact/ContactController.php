@@ -27,15 +27,15 @@ class ContactController extends Controller
         ]);
 
         // パラメータ詰め
-        $requestEmail = $request->get('email');
-        $requestSubject = $request->get('subject');
-        $requestBody = [
+        $requestList = [
+            'requestEmail' => $request->get('email'),
             'requestName' => $request->get('name'),
+            'requestSubject' => $request->get('subject'),
             'requestMessage' => $request->get('message'),
         ];
 
         try {
-            Mail::to('contact@yodaemon.com')->send(new SendMail($requestEmail, $requestSubject, $requestBody));
+            Mail::to('contact@yodaemon.com')->send(new SendMail($requestList));
         } catch (\Exception $ex) {
             logger()->channel('web')->alert("file:{$ex->getFile()} line:{$ex->getLine()} message:{$ex->getMessage()}");
             throw $ex;

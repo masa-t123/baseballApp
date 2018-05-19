@@ -11,21 +11,16 @@ class SendMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    // 親の変数と被らないように
-    private $requestEmail;
-    private $requestSubject;
-    private $requestBody;
+    private $requestList;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($email, $subject, $body)
+    public function __construct($requestList)
     {
-        $this->requestEmail   = $email;
-        $this->requestSubject = $subject;
-        $this->requestBody    = $body;
+        $this->requestList = $requestList;
     }
 
     /**
@@ -36,8 +31,8 @@ class SendMail extends Mailable
     public function build()
     {
         return $this
-        ->from($this->requestEmail)
-        ->subject($this->requestSubject)
-        ->view('emails.contact', $this->requestBody);
+        ->from($this->requestList['requestEmail'], $this->requestList['requestName'])
+        ->subject($this->requestList['requestSubject'])
+        ->view('emails.contact', $this->requestList);
     }
 }
