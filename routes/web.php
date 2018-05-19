@@ -18,6 +18,11 @@
 // TOP
 Route::get('/', 'Web\Top\TopController@index');
 
+// Contact
+Route::get('/contact', 'web\Contact\ContactController@index');
+Route::post('/contact', 'web\Contact\ContactController@post');
+
+
 // Document
 Route::get('/document', 'Web\Document\DocumentController@index');
 // API - 順位表取得
