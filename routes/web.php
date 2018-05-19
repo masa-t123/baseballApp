@@ -19,8 +19,8 @@
 Route::get('/', 'Web\Top\TopController@index');
 
 // Contact
-Route::get('/contact', 'web\Contact\ContactController@index');
-Route::post('/contact', 'web\Contact\ContactController@post');
+Route::get('/contact', 'Web\Contact\ContactController@index');
+Route::post('/contact', 'Web\Contact\ContactController@post');
 
 
 // Document
