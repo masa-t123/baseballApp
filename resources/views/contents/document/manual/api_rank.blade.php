@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <span class="subheading">yodaemon.com - document</span>
+                        <span class="subheading">&nbsp;</span>
                     </div>
                 </div>
             </div>
