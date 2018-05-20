@@ -38,5 +38,15 @@ class DocumentController extends Controller
         return view('contents.document.manual.api_record_batter', []);
     }
 
+    /**
+     * 仕様書 - 成績(投手)取得ページ
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function manualApiRecord4Pitcher(Request $request)
+    {
+        return view('contents.document.manual.api_record_pitcher', []);
+    }
+
 
 }

@@ -61,6 +61,15 @@
                             </a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>プロ野球-成績(投手)取得API</td>
+                        <td>プロ野球の各チームに所属する選手の成績を取得するAPIです。</td>
+                        <td class="text-center">
+                            <a href="/document/manual/api/record/pitcher"><button type="button" class="btn btn-info btn-xs">
+                                    <i class="fa fa-book-open"></i>&nbsp;仕様書</button>
+                            </a>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
