@@ -23,9 +23,9 @@ class RecordPitcherController extends BaseApiController
     {
 
         // jsonヘッダが付いていなければ400で返す
-        if (!$request->isJson()) {
-            return $this->apiFailed('not exist content-type:json', 400);
-        }
+//        if (!$request->isJson()) {
+//            return $this->apiFailed('not exist content-type:json', 400);
+//        }
 
         try {
             $model = new Model();

@@ -35,7 +35,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="api-title">
                     プロ野球 - 成績(野手)取得API
-                    <div class="last-updated">最終更新日:2018-05-14</div>
+                    <div class="last-updated">最終更新日:2018-06-04</div>
                 </div>
                 <hr>
             </div>
@@ -60,10 +60,10 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="text-center">〇</td>
-                            <td>Content-Type</td>
-                            <td>application/json</td>
-                            <td>含めなかった場合400を返します.</td>
+                            <td class="text-center">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         </tbody>
                     </table>

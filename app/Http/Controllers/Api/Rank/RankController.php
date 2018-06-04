@@ -23,9 +23,9 @@ class RankController extends BaseApiController
     public function index(Request $request)
     {
         // jsonヘッダが付いていなければ400で返す
-        if (!$request->isJson()) {
-            return $this->apiFailed('not exist content-type:json', 400);
-        }
+//        if (!$request->isJson()) {
+//            return $this->apiFailed('not exist content-type:json', 400);
+//        }
 
         // バリデーション
         $validator = Validator::make($request->all(), [
